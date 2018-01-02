@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+body,html{ height:100%;}
+body{ overflow:hidden;}
+
+.gps{ position:fixed; top:50%; right:20px; z-index:10; margin-top:-55px;}
+.gps li{ width:10px; height:10px; background:#ccc; border-radius:50%; margin-bottom:10px; cursor:pointer;}
+.gps .current{ width:15px; height:15px; margin-left:-3px;}
+
+.content{ height:100%; width:100%; position:absolute; top:0; left:0; z-index:9;}
+.content>div{ height:100%; box-sizing:border-box; position:relative;}
+
+
+/*为了保证我们以后书写css样式的是全部都思路清晰所以我们列这样的一个规矩
+	第一：先考虑实体化范围 三属性
+	第二：分区的定位
+*/
+/*page1*/
+.page1 h1{width: 247px;height: 185px; background:url(../images/p1.png); background-position:-256px -0px;position: absolute; left:50%; top:50%; margin-left:-124px; margin-top:-310px;}
+
+.page1 p{ width:200%; position:absolute; left:50%; top:50%; margin-left:-100%; margin-top:-47px; text-align:center;}
+.guodu{ transition:all 2s;}
+.page1 p span{ display:inline-block; background:url(../images/p1.png); transition:all 2s;}
+.page1.out p span{ margin:0 100px; opacity:0.1;}
+.page1 p span:nth-of-type(1){width: 63px;height: 83px; background-position:-7px -208px;}
+.page1 p span:nth-of-type(2){width: 91px;height: 90px; background-position:-76px -205px;}
+.page1 p span:nth-of-type(3){width: 82px;height: 85px; background-position:-181px -209px;}
+.page1 p span:nth-of-type(4){width: 90px; height: 91px; background-position:-277px -204px;}
+.page1 p span:nth-of-type(5){width: 92px; height: 90px; background-position:-376px -205px;}
+.page1 p span:nth-of-type(6){width: 82px; height: 85px; background-position:-481px -209px;}
+.page1 p span:nth-of-type(7){width: 92px; height: 90px; background-position:-576px -205px;}
+.page1 p span:nth-of-type(8){width: 91px; height: 91px; background-position:-677px -204px;}
+
+.page1 footer{width: 772px; height: 49px; background:url(../images/p1.png); background-position:-0 -345px; position:absolute; left:50%; top:50%; margin-left:-386px; margin-top:120px; transition:all 1s;}
+.page1.out footer{ opacity:0.1; transform:rotate(360deg)}
+
+
+/*规律总结
+	总结： 第一page页下的第一级元素 背景图都相同，都绝对定位，坐标都是50%;
+*/
+.content>div>*{ position:absolute; left:50%; top:50%;}
+/*page2*/
+.page2 div{ width: 408px; height: 489px; background:url(../images/shield.png); margin-left:-558px; margin-top:-241px;}
+.page2.out div{ transform:rotate(360deg); opacity:0.1; margin-left:-1558px;}
+
+.page2 p{ width:  635px; height: 309px; background:url(../images/p2.png); margin-left:-30px; margin-top:-155px;}
+.page2.out p{ opacity:0.1; margin-left:1000px;}
+
+
+/*page3*/
+.page3>*{ background:url(../images/p3.png);}
+.page3 p{width: 631px;height: 273px; background-position:-0 -291px; margin-left:-640px; margin-top:-137px;}
+
+.page3 span:nth-of-type(1){width: 445px;height: 447px; background-position:-3px -606px; margin-left:80px; margin-top:-224px; -webkit-animation:rolls 8s infinite linear;}
+
+@-webkit-keyframes rolls{
+	0%{ transform:rotate(0deg);}
+	100%{ transform:rotate(360deg);}
+}
+
+
+.page3 span:nth-of-type(2){width: 381px;height: 403px; background-position:-474px -620px; margin-left: 111px; margin-top: -203px; -webkit-animation:rolls 6s infinite linear alternate;}
+
+
+.page3 span:nth-of-type(3){width: 361px;height: 362px; background-position:-882px -643px; margin-left: 121px; margin-top: -182px; -webkit-animation:rolls 8s infinite linear;}
+
+.page3 div{width: 203px;height: 203px; background-position:-372px -21px; margin-left: 197px; margin-top: -104px;}
+.page3.out div{ margin-left:-1500px; margin-top:1500px;}
+
+/*page4*/
+
+.page4>*{ background:url(../images/p4.png);}
+.page4 header{width: 528px;height: 66px; background-position:-1px -1px; margin-left: -611px; margin-top: -189px;}
+.page4 section{width: 505px;height: 354px; background-position:-13px -82px; margin-left: -600px; margin-top:-137px;}
+
+.page4 p{width: 611px;height: 346px; background-position:-566px -1px; margin-left: 0px; margin-top: -163px;}
+.page4.out header{ margin-left:-1500px; opacity:0.1;}
+.page4.out section{ height:0;}
+.page4.out p{ margin-left:1000px; opacity:0.1;}
+
+/*page5*/
+.page5>*{ background:url(../images/p5.png);}
+.page5 header{width: 1077px; height: 133px; background-position:-0 -0; margin-left: -538px; margin-top: -330px;}
+.page5 footer{width: 1004px; height: 575px; background-position:-38px -160px; margin-left: -502px; margin-top: -255px; transition-delay:1s;}
+
+.page5.out header{ opacity:0; transform:rotate(720deg) scale(3,3);}
+.page5.out footer{ opacity:0; transform:rotate(720deg) scale(4,4);}
+
+.page6 h1{width: 247px;height: 185px; background:url(../images/p1.png); background-position:-256px -0px;position: absolute; left:50%; top:50%; margin-left:-124px; margin-top:-310px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
